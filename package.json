@@ -4,7 +4,7 @@
   "description": "RabbitLock runtime CLI for decrypting SOPS JSON to env vars.",
   "type": "module",
   "bin": {
-    "rabbitlock-env": "./rabbitlock-env.mjs"
+    "rabbitlock-env": "rabbitlock-env.mjs"
   },
   "files": [
     "rabbitlock-env.mjs",
@@ -17,7 +17,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/prismworks-ai/rabbitlock-runtime.git"
+    "url": "git+https://github.com/prismworks-ai/rabbitlock-runtime.git"
   },
   "scripts": {
     "test": "node --test runtime.test.mjs"

@@ -1,0 +1,30 @@
+/* tslint:disable */
+/* eslint-disable */
+export const memory: WebAssembly.Memory;
+export const greet: (a: number, b: number) => [number, number];
+export const parse_and_verify_sops: (a: number, b: number) => [number, number];
+export const derive_hybrid_keypair: (a: number, b: number) => [number, number, number, number];
+export const verify_sops_integrity: (a: number, b: number, c: number, d: number) => [number, number];
+export const decrypt_data_key: (a: number, b: number, c: number, d: number) => [number, number, number, number];
+export const decrypt_and_verify_sops: (a: number, b: number, c: number, d: number) => [number, number, number, number];
+export const decrypt_sops_content: (a: number, b: number, c: number, d: number) => [number, number, number, number];
+export const encrypt_sops_json: (a: number, b: number, c: number, d: number) => [number, number, number, number];
+export const encrypt_sops_json_for_recipient: (a: number, b: number, c: number, d: number) => [number, number, number, number];
+export const pq_generate_keypair: () => [number, number];
+export const pq_encapsulate: (a: number, b: number) => [number, number, number, number];
+export const pq_decapsulate: (a: number, b: number, c: number, d: number) => [number, number, number, number];
+export const pq_mlkem_generate_keypair: () => [number, number];
+export const pq_mlkem_encapsulate: (a: number, b: number) => [number, number, number, number];
+export const pq_mlkem_decapsulate: (a: number, b: number, c: number, d: number) => [number, number, number, number];
+export const pq_get_sizes: () => [number, number];
+export const create_zip_archive: (a: any) => [number, number, number, number];
+export const encrypt_binary_hybrid: (a: number, b: number, c: number, d: number) => [number, number, number, number];
+export const decrypt_binary_hybrid: (a: number, b: number, c: number, d: number) => [number, number, number, number];
+export const __wbindgen_malloc: (a: number, b: number) => number;
+export const __wbindgen_realloc: (a: number, b: number, c: number, d: number) => number;
+export const __wbindgen_exn_store: (a: number) => void;
+export const __externref_table_alloc: () => number;
+export const __wbindgen_externrefs: WebAssembly.Table;
+export const __wbindgen_free: (a: number, b: number, c: number) => void;
+export const __externref_table_dealloc: (a: number) => void;
+export const __wbindgen_start: () => void;

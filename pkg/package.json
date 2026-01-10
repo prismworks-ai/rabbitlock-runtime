@@ -1,0 +1,14 @@
+{
+  "name": "rabbitlock-crypto",
+  "version": "0.1.0",
+  "files": [
+    "rabbitlock_crypto_bg.wasm",
+    "rabbitlock_crypto.js",
+    "rabbitlock_crypto.d.ts"
+  ],
+  "module": "rabbitlock_crypto.js",
+  "types": "rabbitlock_crypto.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}

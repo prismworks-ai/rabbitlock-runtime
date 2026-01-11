@@ -64,6 +64,8 @@ load_env_into_os(seed_hex="...", sops_path="env.sops.json")
 ```
 
 Note: the Python helper shells out to Node.js.
+Paths are resolved from your current working directory; pass an absolute
+`sops_path` if needed.
 
 ## Using in apps
 

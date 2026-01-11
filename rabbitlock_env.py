@@ -50,7 +50,7 @@ def _run_node(seed_hex: str, sops_path: str) -> Dict[str, Any]:
         "--json",
     ]
     result = subprocess.run(
-        cmd, check=True, text=True, capture_output=True, cwd=str(ROOT)
+        cmd, check=True, text=True, capture_output=True, cwd=os.getcwd()
     )
     return json.loads(result.stdout)
 

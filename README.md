@@ -105,3 +105,7 @@ load_env_into_os(seed_hex="...", sops_path="env.sops.json")
 - This package bundles the Wasm crypto artifacts in `pkg/`.
 - The CLI reads the SOPS file from the current working directory unless `--in`
   is provided.
+
+## Support & Issues
+
+If you encounter any issues or have questions, please open an issue on the [GitHub repository](https://github.com/prismworks-ai/rabbitlock-runtime) or contact us at [support@rabbitlock.com](mailto:support@rabbitlock.com).

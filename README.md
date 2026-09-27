@@ -1,5 +1,10 @@
 # @rabbitlock/runtime
 
+## PrismWorks ecosystem role — September 2026
+
+A small headless credential-materialization helper, maintained as part of RabbitLock. See the [current strategy](docs/product-strategy.md) and [implementation plan](docs/implementation-plan.md) for source evidence, boundaries and remove/modify/add work. Databridle integration is planned unless a versioned passing report establishes otherwise. These documents supersede older expansion and maturity claims below; existing setup/API instructions remain reference material.
+
+
 Minimal RabbitLock runtime helpers for decrypting `env.sops.json` into runtime
 environment variables.
 
@@ -37,7 +42,9 @@ npm install @rabbitlock/runtime
 
 Requires Node.js.
 
-## Usage (CLI)
+## Existing offline CLI usage
+
+These compatibility examples use a long-lived local seed and expose plaintext through stdout, environment or files. They are not the proposed protected-agent interface. Executor-only credential delivery is future work in the implementation plan.
 
 ```bash
 export RABBITLOCK_SEED_HEX=...
@@ -67,7 +74,7 @@ Note: the Python helper shells out to Node.js.
 Paths are resolved from your current working directory; pass an absolute
 `sops_path` if needed.
 
-## Using in apps
+## Legacy offline application examples
 
 Shell or Node startup:
 
@@ -97,7 +104,7 @@ load_env_into_os(seed_hex="...", sops_path="env.sops.json")
 ## Security notes
 
 - Keep `RABBITLOCK_SEED_HEX` in a secrets manager, never in Git.
-- Prefer the `--export` + `eval` flow to avoid writing plaintext to disk.
+- `--export` emits shell text: do not use `eval` for protected-agent delivery. It is retained only as a legacy interface; prefer parsing structured output in a trusted caller while the isolated child-process API is implemented.
 - Use `--write-env` only for local debugging.
 
 ## Notes
